@@ -1,0 +1,10 @@
+create table partida (
+	idpartida integer not null primary key autoincrement,
+	datapartida timestamp not null,
+	estadio varchar(255) not null,
+	mandante integer not null,
+	visitante integer not null,
+	
+	foreign key (mandante) references equipe(idequipe)
+	foreign key (visitante) references equipe(idequipe)
+);
